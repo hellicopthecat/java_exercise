@@ -1,0 +1,10 @@
+package ch4.sec07;
+
+public class ObjectDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

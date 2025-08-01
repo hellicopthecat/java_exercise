@@ -1,0 +1,22 @@
+package ch2;
+
+public class TernaryOperatorDemo {
+
+	public static void main(String[] args) {
+		int x = 1, y;
+		
+		y = (x == 1) ? 10 : 20;
+		y = (x == 1) ? 10 : (5 / 0);
+		System.out.println(y);
+		
+		int a,b,c;
+		a=b=c=3;
+		c= a*b / c % 2;
+		System.out.println(c);
+		c = a++ - --b * a;
+//		6 3
+		System.out.println(c);
+
+	}
+
+}
