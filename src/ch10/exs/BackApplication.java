@@ -52,6 +52,7 @@ public class BackApplication {
 					do {
 						System.out.println("초기금액을 입력하세요");
 						balance = in.nextLong();
+//						balance = in.nextLine();
 						try {
 //							long parsedBalance = Long.parseLong(balance);
 							LongPredicate checkBalance = a -> a < (long) 100;
