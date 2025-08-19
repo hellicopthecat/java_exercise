@@ -11,6 +11,7 @@ public class OptionalDemo {
 		Optional<Integer> of = Optional.of(3);
 		Optional<Integer> ofNullable = Optional.ofNullable(i);
 
+		System.out.println(e);
 		System.out.println(e.isEmpty());
 		System.out.println(of.get());
 		System.out.println(ofNullable.isEmpty());
