@@ -106,6 +106,18 @@ public class SLinkedList<E> {
 		return null;
 	}
 
+	E removeLast(int index) {
+		Node<E> tobeDeleted = getNode(index);
+		Node<E> prev = getNode(index - 1);
+		if (tobeDeleted == tail) {
+			tail = prev;
+		}
+		prev.next = tobeDeleted.next;
+		tobeDeleted.next = null;
+		size--;
+		return tobeDeleted.item;
+	}
+
 	E removeFirst() {
 		if (isEmpty()) {
 			throw new IndexOutOfBoundsException();
@@ -121,6 +133,18 @@ public class SLinkedList<E> {
 		}
 		size--;
 		return removedNode.item;
+	}
+
+	int indexOf(E item) {
+		Node<E> temp = head;
+		int findIndex = -1;
+		for (int i = 0; i < size - 1; i++) {
+			if (temp == item) {
+				findIndex = i;
+				break;
+			}
+		}
+		return findIndex;
 	}
 
 	Node<E> getNode(int index) {
